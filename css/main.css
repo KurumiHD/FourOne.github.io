@@ -1,4 +1,4 @@
-*{
+﻿*{
 	padding:0px;
 	margin: 0px;
 }
@@ -8,7 +8,7 @@ body{
 @font-face
 {
 font-family: '迷你简启体';
-src: url('../font/迷你简启体.TTF');
+src: url('/font/迷你简启体.TTF').format("truetype");
 }
 #main {
 	width:640px;
