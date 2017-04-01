@@ -11,24 +11,24 @@ font-family: '迷你简启体';
 src: url('../font/迷你简启体.TTF') format("truetype");
 }
 #main {
-	width:640px;
-	height:960px;
+	width:320px;
+	height:480px;
 	margin: 0px auto;
 	background-color:rgba(255,253,225,1.00);
 	text-align: center;
 }
 img {
 	display:inline-block;
-	width:200px;
-	height:200px;
+	width:100px;
+	height:100px;
 }
 #main #word{
-	padding-top:100px;
+	padding-top:20px;
 	text-align: center;
 	font-family: "迷你简启体";
-	font-size: 30px;
-	width:600px;
-	height:600px;
+	font-size: 15px;
+	width:300px;
+	height:300px;
 	margin: 0px auto;
 	border: none;
 	outline: none;
