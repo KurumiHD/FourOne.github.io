@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>无标题文档</title>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.typetype.min.js"></script>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div id="main">
+		<textarea id="word"></textarea>
+		<canvas id="myCanvas"></canvas>
+		<img src="img/在一起吧.png" alt="" style="display: none" />
+	</div>
+
+<script type="text/javascript">  
+	var arr = [];//保存所有的XY坐标，只为验证。实际程序中可删除。  
+	var r = 4;  
+	var radian;//弧度  
+	var i;  
+	var radianDecrement;//弧度增量  
+	var time = 10;//每个点之间的时间间隔  
+	var intervalId;  
+	var num = 360;//分割为 360 个点  
+	var startRadian = Math.PI;  
+	var ctx;   
+	function startAnimation() {  
+		ctx = document.getElementById("myCanvas").getContext("2d");  
+		drawHeart();  
+	}  
+
+	function drawHeart() {  
+		ctx.strokeStyle = "rgba(244,40,205,1.00)";  
+		ctx.lineWidth = 1;//设置线的宽度  
+		radian = startRadian;//弧度设为初始弧度  
+		radianDecrement = Math.PI / num * 2;  
+		ctx.moveTo(getX(radian), getY(radian));//移动到初始点  
+		i = 0;  
+		intervalId = setInterval("printHeart()", time);
+		ctx.fillStyle
+	}  
+	//x = 16 sin^3 t, y = (13 cos t - 5 cos 2t - 2 cos 3t - cos 4t)  
+	function printHeart() {  
+		radian += radianDecrement;  
+		ctx.lineTo(getX(radian), getY(radian));//在旧点和新点之间连线  
+		//arr.push("X:" + getX(radian) + "<br/>Y:" + getY(radian) + "<br/>");  
+		i++;  
+		ctx.stroke();//画线  
+		if (i >= num) {  
+			clearInterval(intervalId);  
+			//document.getElementById("bs").innerHTML = arr.join("");//打印所有的XY坐标点。  
+		}  
+	}  
+	function getX(t) {//由弧度得到 X 坐标  
+		return 100 + r * (16 * Math.pow(Math.sin(t), 3));  
+	}  
+
+	function getY(t) {//由弧度得到 Y 坐标  
+		return 50 - r * (13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t));  
+	}
+	function IMGfade(){
+		$('img').fadeIn("slow","A()");
+	}
+	function A(){
+		alert('傻逼,被耍了把~~哈哈哈');
+	}
+</script>
+<script>
+	$(function(){
+		$('#word').focus().typetype("人间四月芳菲尽，山寺桃花始盛开",{e:0,t:300}).delay(500)
+			.typetype("\n今天是一个很特别的日子",{e:0.1,t:300}).delay(500)
+			.typetype("\n很多人都喜欢开玩笑",{e:0.1,t:300}).delay(500)
+			.typetype("\n比如,我稀饭你,在一起好吗",{e:0.1,t:300}).delay(500)
+			.typetype("\n\n你会答应吗",{e:0.1,t:300}).delay(500)
+			.typetype("\n\n但如果现在是我",{e:0.1,t:300}).delay(500)
+			.typetype("\n问你",{e:0.1,t:300}).delay(500)
+			.typetype("\n我喜欢你",{e:0.1,t:300}).delay(500)
+			.typetype("\n真情,知心,达意",{e:0.1,t:300}).delay(500)
+			.typetype("\n\n那么你",{e:0.1,t:300}).delay(500)
+			.typetype("\n愿意吗",{e:0.1,t:300}).delay(500)
+		;
+		var t=setTimeout("startAnimation()",60000);
+		var s=setTimeout("IMGfade()",63000);
+	})
+</script>
+</body>
+</html>

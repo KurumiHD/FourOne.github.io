@@ -1,0 +1,36 @@
+*{
+	padding:0px;
+	margin: 0px;
+}
+body{
+	background-color:rgba(255,253,225,1.00);
+}
+@font-face
+{
+font-family: '迷你简启体';
+src: url('../font/迷你简启体.TTF');
+}
+#main {
+	width:640px;
+	height:960px;
+	margin: 0px auto;
+	background-color:rgba(255,253,225,1.00);
+	text-align: center;
+}
+img {
+	display:inline-block;
+	width:200px;
+	height:200px;
+}
+#main #word{
+	padding-top:100px;
+	text-align: center;
+	font-family: "迷你简启体";
+	font-size: 30px;
+	width:600px;
+	height:540px;
+	margin: 0px auto;
+	border: none;
+	outline: none;
+	background-color: rgba(255,253,225,1.00);
+}
