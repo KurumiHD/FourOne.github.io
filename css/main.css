@@ -1,6 +1,7 @@
 ﻿*{
 	padding:0px;
 	margin: 0px;
+	border: none;
 }
 body{
 	background-color:rgba(255,253,225,1.00);
@@ -15,12 +16,16 @@ src: url('../font/迷你简启体.TTF') format("truetype");
 	height:480px;
 	margin: 0px auto;
 	background-color:rgba(255,253,225,1.00);
-	text-align: center;
 }
 img {
 	display:inline-block;
-	width:100px;
-	height:100px;
+	width:120px;
+	height:120px;
+	text-align: right;
+}
+canvas{
+	display:inline-block;
+	text-align: left;
 }
 #main #word{
 	padding-top:20px;
@@ -33,4 +38,5 @@ img {
 	border: none;
 	outline: none;
 	background-color: rgba(255,253,225,1.00);
+	text-align: center;
 }

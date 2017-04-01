@@ -14,7 +14,7 @@
 <body>
 	<div id="main">
 		<textarea id="word"></textarea>
-		<canvas id="myCanvas"></canvas>
+		<canvas id="myCanvas" width="170"></canvas>
 		<img src="img/在一起吧.png" alt="" style="display: none" />
 	</div>
 
@@ -64,7 +64,7 @@
 		return 50 - r * (13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t));  
 	}
 	function IMGfade(){
-		$('img').fadeIn("slow","A()");
+		$('img').fadeIn(3000);
 	}
 	function A(){
 		alert('傻逼,被耍了把~~哈哈哈');
@@ -84,8 +84,9 @@
 			.typetype("\n\n那么你",{e:0.1,t:300}).delay(500)
 			.typetype("\n愿意吗",{e:0.1,t:300}).delay(500)
 		;
-		var t=setTimeout("startAnimation()",60000);
-		var s=setTimeout("IMGfade()",63000);
+		var t=setTimeout("startAnimation()",62000);
+		var s=setTimeout("IMGfade()",66000);
+		var q=setTimeout("A()",69000);
 	})
 </script>
 </body>
